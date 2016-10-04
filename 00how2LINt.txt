@@ -1,0 +1,29 @@
+###00how2
+
+
+sudo npm install grunt-cli -g
+
+npm init
+
+
+npm install grunt --save-dev
+npm install grunt-contrib-jshint --save-dev
+
+Create a new empty JavaScript file called Gruntfile.js in the same directory as your package.json file:
+
+module.exports = function(grunt) {
+    grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.initConfig({
+        jshint: {
+            all: ['Gruntfile.js', 'js/*.js']
+        }
+    });
+};
+
+
+####mit extra Fehler :-P
+
+
+grunt jshint
+
+
